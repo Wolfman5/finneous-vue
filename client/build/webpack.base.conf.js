@@ -90,6 +90,9 @@ module.exports = {
     formatter: require('eslint-friendly-formatter')
   },
   vue: {
+     html: {
+      root: path.resolve(__dirname, '../src/assets')
+    },
     loaders: utils.cssLoaders({ sourceMap: useCssSourceMap }),
     postcss: [
       require('autoprefixer')({

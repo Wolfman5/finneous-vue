@@ -1,11 +1,8 @@
 <template>
   <div class="home">
-    <h3>{{msg}} </h3>
-    <h2>Dylan Was Here!!</h2>
-    <p>
-        home works!
-    </p>
-    <img src="../assets/logo.png" />
+    <div class="navbar">
+      <Navbar></Navbar>
+    </div>
     <div class="container">
         <card v-for="item in cards" v-bind:card="item"></card>
       </div>
@@ -15,10 +12,12 @@
 
 <script>
 import Card from './Card'
+import Navbar from './Navbar'
 export default {
   name: 'home',
   components: {
-    Card
+    Card,
+    Navbar
   },
   data () {
     return {
@@ -26,16 +25,27 @@ export default {
       cards: [
         {
           title: 'Cutest Puppy - Finley',
-          imgUrl: '../assets/logo.png',
+          imgUrl: '/static/img/finleyPark.jpg',
           text: 'My dog is the coolest!!!!'
         },
         {
           title: 'Asheville: The Princess and the Pup',
-          imgUrl: './src/assets/img/Asheville.jpg',
+          imgUrl: '/static/img/Asheville.jpg',
           text: 'My girlfriend likes our dog way too much'
+        },
+        {
+          title: 'Playing with the puppy uncles',
+          imgUrl: '/static/img/puppyUncles.jpg',
+          text: 'Finley playing with his puppy uncles'
         }
       ]
     }
   }
 }
 </script>
+
+<styles>
+  .navbar{
+    margin-bottom: 18px;
+  }
+</styles>
