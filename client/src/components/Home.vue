@@ -3,9 +3,12 @@
     <div class="navbar">
       <Navbar></Navbar>
     </div>
-    <div class="container">
+    <div class="mdl-grid">
+      <div class="content mdl-cell mdl-cell--2-col"></div>
+      <div class="content mdl-cell mdl-cell--8-col">
         <card v-for="item in cards" v-bind:card="item"></card>
       </div>
+      <div class="content mdl-cell mdl-cell--2-col"></div>
     </div>
   </div>
 </template>
@@ -24,11 +27,6 @@ export default {
       msg: 'Welcome to Your Home Page',
       cards: [
         {
-          title: 'Cutest Puppy - Finley',
-          imgUrl: '/static/img/finleyPark.jpg',
-          text: 'My dog is the coolest!!!!'
-        },
-        {
           title: 'Asheville: The Princess and the Pup',
           imgUrl: '/static/img/Asheville.jpg',
           text: 'My girlfriend likes our dog way too much'
@@ -44,8 +42,11 @@ export default {
 }
 </script>
 
-<styles>
-  .navbar{
-    margin-bottom: 18px;
-  }
-</styles>
+<style>
+ .mdl-grid {
+   max-width: 80%;
+ }
+ .content{
+   margin-top: 35vh;
+ }
+</style>
