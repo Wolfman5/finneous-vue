@@ -48,5 +48,6 @@
 .nav{
   z-index: 100;
   height:25%;
+  position: fixed;
 }
 </style>
