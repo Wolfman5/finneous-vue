@@ -1,15 +1,17 @@
 <template>
-  <div class="home">
-    <div class="navbar">
-      <Navbar></Navbar>
-    </div>
-    <div class="mdl-grid">
-      <div class="content mdl-cell mdl-cell--2-col"></div>
-      <div class="content mdl-cell mdl-cell--8-col">
-        <card v-for="item in cards" v-bind:card="item"></card>
-      </div>
-      <div class="content mdl-cell mdl-cell--2-col"></div>
-    </div>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+    <Navbar></Navbar>
+      <main class="mdl-layout__content">
+        <div class="page-content"><!-- Your content goes here -->
+          <div class="mdl-grid">
+            <div class="content mdl-cell mdl-cell--2-col"></div>
+            <div class="content mdl-cell mdl-cell--8-col">
+              <card v-for="item in cards" v-bind:card="item"></card>
+            </div>
+            <div class="content mdl-cell mdl-cell--2-col"></div>
+          </div>
+        </div>
+      </main>
   </div>
 </template>
 
@@ -45,8 +47,5 @@ export default {
 <style>
  .mdl-grid {
    max-width: 80%;
- }
- .content{
-   margin-top: 35vh;
  }
 </style>
