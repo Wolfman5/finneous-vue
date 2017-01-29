@@ -5,6 +5,7 @@ import VueRouter from 'vue-router'
 import Home from './components/Home'
 import Hello from './components/Hello'
 import Navbar from './components/Navbar'
+import BlogPost from './components/BlogPost'
 import VueMaterial from 'vue-material'
 
 Vue.use(VueMaterial)
@@ -14,6 +15,7 @@ Vue.component('Navbar', Navbar)
 const routes = [
   { path: '/home', component: Home },
   { path: '/hello', component: Hello },
+  { path: '/blogPost', component: BlogPost },
   { path: '*', component: Home }
 ]
 

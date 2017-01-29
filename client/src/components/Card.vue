@@ -7,9 +7,9 @@
       {{card.text}}
     </div>
     <div class="mdl-card__actions mdl-card--border">
-      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+      <router-link to="/blogPost" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
         Read More
-      </a>
+      </router-link>
     </div>
     <div class="mdl-card__menu">
       <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
