@@ -1,26 +1,15 @@
 <template>
-  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
-    <Navbar></Navbar>
-    <main id="content" class="mdl-layout__content">
-      <div class="mdl-grid">
-        <div class="content mdl-cell mdl-cell--2-col"></div>
-        <div class="content mdl-cell mdl-cell--8-col">
-          <card v-for="item in cards" v-bind:card="item"></card>
-        </div>
-        <div class="content mdl-cell mdl-cell--2-col"></div>
-      </div>
-    </main>
+  <div>
+    <card v-for="item in cards" v-bind:card="item"></card>
   </div>
 </template>
 
 <script>
 import Card from './Card'
-import Navbar from './Navbar'
 export default {
   name: 'home',
   components: {
-    Card,
-    Navbar
+    Card
   },
   data () {
     return {
