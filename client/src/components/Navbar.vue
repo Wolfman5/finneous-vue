@@ -36,7 +36,7 @@
         <nav class="demo-navigation mdl-navigation mdl-color--black">
           <router-link to="/home" class="mdl-navigation__link mdl-color-text--white"><i class="material-icons" role="presentation">home</i>Home</router-link>
           <router-link to="/hello" class="mdl-navigation__link mdl-color-text--white"><i class="material-icons" role="presentation">inbox</i>Inbox</router-link>
-          <a class="mdl-navigation__link mdl-color-text--white" href=""><i class="material-icons" role="presentation">delete</i>Trash</a>
+          <a class="mdl-navigation__link mdl-color-text--white" href="/#/hello"><i class="material-icons" role="presentation">delete</i>Trash</a>
           <a class="mdl-navigation__link mdl-color-text--white" href=""><i class="material-icons" role="presentation">report</i>Spam</a>
           <a class="mdl-navigation__link mdl-color-text--white" href=""><i class="material-icons" role="presentation">forum</i>Forums</a>
           <a class="mdl-navigation__link mdl-color-text--white" href=""><i class="material-icons" role="presentation">flag</i>Updates</a>
