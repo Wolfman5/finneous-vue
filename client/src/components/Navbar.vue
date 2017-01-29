@@ -66,10 +66,14 @@
     }
 
 @media screen and (min-width: 0px) and (max-width: 1024px) {
-  #myHeader{ display: block; }  /* show it on small screens */
+  #myHeader{ 
+    display: block;
+  }  /* show it on sma ll screens */
 }
 
 @media screen and (min-width: 1024px) and (max-width: 50000px) {
-  #myHeader { display: none; }   /* hide it elsewhere */
+  #myHeader { 
+    display: none; 
+    margin: 0px;}   /* hide it elsewhere */
 }
 </style>

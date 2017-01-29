@@ -1,17 +1,15 @@
 <template>
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
     <Navbar></Navbar>
-      <main class="mdl-layout__content">
-        <div class="page-content"><!-- Your content goes here -->
-          <div class="mdl-grid">
-            <div class="content mdl-cell mdl-cell--2-col"></div>
-            <div class="content mdl-cell mdl-cell--8-col">
-              <card v-for="item in cards" v-bind:card="item"></card>
-            </div>
-            <div class="content mdl-cell mdl-cell--2-col"></div>
-          </div>
+    <main id="content" class="mdl-layout__content">
+      <div class="mdl-grid">
+        <div class="content mdl-cell mdl-cell--2-col"></div>
+        <div class="content mdl-cell mdl-cell--8-col">
+          <card v-for="item in cards" v-bind:card="item"></card>
         </div>
-      </main>
+        <div class="content mdl-cell mdl-cell--2-col"></div>
+      </div>
+    </main>
   </div>
 </template>
 
@@ -48,4 +46,10 @@ export default {
  .mdl-grid {
    max-width: 80%;
  }
+
+ @media screen and (min-width: 0px) and (max-width: 1024px) {
+  #content { 
+    margin-top: 50px;
+   }   /* hide it elsewhere */
+}
 </style>
