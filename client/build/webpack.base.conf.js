@@ -1,6 +1,7 @@
 var path = require('path')
 var config = require('../config')
 var utils = require('./utils')
+var htmlLoader = require('html-loader');
 var projectRoot = path.resolve(__dirname, '../')
 
 var env = process.env.NODE_ENV
@@ -86,17 +87,12 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        loader: 'htmlLoader'
+        loader: 'html'
       }
     ]
   },
   eslint: {
     formatter: require('eslint-friendly-formatter')
-  },
-  htmlLoader: {
-    ignoreCustomFragments: [/\{\{.*?}}/],
-    root: path.resolve(__dirname, 'assets'),
-    attrs: ['img:src', 'link:href']
   },
   vue: {
      html: {
