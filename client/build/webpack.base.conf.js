@@ -83,11 +83,20 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
+      },
+      {
+        test: /\.html$/,
+        loader: 'htmlLoader'
       }
     ]
   },
   eslint: {
     formatter: require('eslint-friendly-formatter')
+  },
+  htmlLoader: {
+    ignoreCustomFragments: [/\{\{.*?}}/],
+    root: path.resolve(__dirname, 'assets'),
+    attrs: ['img:src', 'link:href']
   },
   vue: {
      html: {
