@@ -7,7 +7,7 @@
             {{card.text}}
         </div>
         <div class="mdl-card__actions mdl-card--border">
-            <router-link to="/blogPost" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            <router-link :to="{ path: '/blogPost', query: { blogId: card.id }}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
             Read More
             </router-link>
         </div>

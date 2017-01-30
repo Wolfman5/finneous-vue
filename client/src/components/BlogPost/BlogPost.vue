@@ -1,15 +1,17 @@
 <template>
   <div class="hello">
     <h1>Blog Post punks!</h1>
+    <h3> BlogId: {{blogId}}</h3>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'hello',
+  name: 'BlogPost',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      blogId: this.$route.query.blogId
     }
   }
 }
