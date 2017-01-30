@@ -2,10 +2,10 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from './components/Home'
-import Hello from './components/Hello'
-import Navbar from './components/Navbar'
-import BlogPost from './components/BlogPost'
+import Home from './components/Home/Home'
+import Hello from './components/Hello/Hello'
+import Navbar from './components/Navbar/Navbar'
+import BlogPost from './components/BlogPost/BlogPost'
 import VueMaterial from 'vue-material'
 
 Vue.use(VueMaterial)
@@ -25,17 +25,6 @@ const router = new VueRouter({
 /* eslint-disable no-new */
 new Vue({
   router,
-  template: '<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">' +
-    '<Navbar></Navbar>' +
-    '<main id="content" class="mdl-layout__content">' +
-      '<div class="mdl-grid">' +
-        '<div class="content mdl-cell mdl-cell--1-col"></div>' +
-        '<div class="content mdl-cell mdl-cell--10-col">' +
-          '<router-view><router-view>' +
-        '</div>' +
-        '<div class="content mdl-cell mdl-cell--1-col"></div>' +
-      '</div>' +
-    '</main>' +
-  '</div>'
+  template: require('./main.template.html')
 }).$mount('#container')
 
