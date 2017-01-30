@@ -1,0 +1,27 @@
+.inverted-color{
+    color: white;
+    background-color: black;
+
+  }
+
+#view-source {
+    position: fixed;
+    display: block;
+    right: 0;
+    bottom: 0;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    z-index: 900;
+}
+
+@media screen and (min-width: 0px) and (max-width: 1024px) {
+  #myHeader{ 
+    display: block;
+  }  /* show it on sma ll screens */
+}
+
+@media screen and (min-width: 1024px) and (max-width: 50000px) {
+  #myHeader { 
+    display: none; 
+    margin: 0px;}   /* hide it elsewhere */
+}

@@ -1,13 +1,9 @@
-<template>
-  <div>
-    <card v-for="item in cards" v-bind:card="item"></card>
-  </div>
-</template>
-
 <script>
 import Card from '../Card/Card'
 export default {
   name: 'home',
+  template: require('./Home.template.html'),
+  styles: require('./Home.styles.css'),
   components: {
     Card
   },
@@ -32,15 +28,3 @@ export default {
   }
 }
 </script>
-
-<style>
- .mdl-grid {
-   max-width: 80%;
- }
-
- @media screen and (min-width: 0px) and (max-width: 1024px) {
-  #content { 
-    margin-top: 50px;
-   }   /* hide it elsewhere */
-}
-</style>
