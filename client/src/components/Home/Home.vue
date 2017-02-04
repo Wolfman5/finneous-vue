@@ -7,23 +7,21 @@ export default {
   components: {
     Card
   },
+  mounted: function () {
+    this.fetchCards()
+  },
   data () {
     return {
-      msg: 'Welcome to Your Home Page',
-      cards: [
-        {
-          id: '1',
-          title: 'Asheville: The Princess and the Pup',
-          imgUrl: '/static/img/Asheville.jpg',
-          text: 'My girlfriend likes our dog way too much'
-        },
-        {
-          id: '2',
-          title: 'Playing with the puppy uncles',
-          imgUrl: '/static/img/puppyUncles.jpg',
-          text: 'Finley playing with his puppy uncles'
-        }
-      ]
+      cards: []
+    }
+  },
+  methods: {
+    fetchCards: function () {
+      console.log('TRYINg TO GET STUFF')
+      this.axios.get('http://localhost:3000/blogs')
+        .then((response) => {
+          this.$data.cards = response.data.cards
+        })
     }
   }
 }

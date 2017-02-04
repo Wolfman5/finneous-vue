@@ -2,14 +2,18 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import axios from 'axios'
 import Home from './components/Home/Home'
 import Hello from './components/Hello/Hello'
 import Navbar from './components/Navbar/Navbar'
 import BlogPost from './components/BlogPost/BlogPost'
 import VueMaterial from 'vue-material'
+import VueAxios from 'vue-axios'
 
+Vue.use(VueAxios, axios)
 Vue.use(VueMaterial)
 Vue.use(VueRouter)
+
 Vue.component('Navbar', Navbar)
 
 const routes = [
