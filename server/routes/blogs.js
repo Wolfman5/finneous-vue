@@ -1,10 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  console.log("CALLED THIS SERVICE");
-  res.send({
+
+var respObj = {
       cards: [
         {
           id: '1',
@@ -19,7 +17,27 @@ router.get('/', function(req, res, next) {
           text: 'Finley playing with his puppy uncles'
         }
       ]
-  });
+  };
+/* GET users listing. */
+
+router.get('/:id', function(req, res, next) {
+  const id = req.params.id
+  let cardsExist = false;
+  respObj.cards.forEach( (card) => 
+    {
+      if(card.id === id){
+        cardsExist = true;
+        res.send(card);
+      }
+    }
+  );
+  cardsExist ? console.log('SUCCESS FOR ID: ' + id) : res.send({status: 'ERROR'});
 });
+
+router.get('/', function(req, res, next) {
+  res.send(respObj);
+});
+
+
 
 module.exports = router;
