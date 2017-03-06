@@ -10,6 +10,7 @@ export default {
     return {
       msg: '',
       title: '',
+      imgUrl: '',
       blogId: this.$route.query.blogId
     }
   },
@@ -17,9 +18,9 @@ export default {
     fetchCard: function (id) {
       this.axios.get('http://localhost:3000/blogs/' + id)
         .then((response) => {
-          console.log(JSON.stringify(response))
           this.$data.title = response.data.title
           this.$data.msg = response.data.text
+          this.$data.imgUrl = response.data.imgUrl
         })
     }
   }

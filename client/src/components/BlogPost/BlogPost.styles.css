@@ -15,3 +15,17 @@ li {
 a {
   color: #42b983;
 }
+
+.blogPostTitleImage {
+  height: 280px;
+}
+
+.blogTitle{
+    border-top: 5px white solid;
+    border-bottom: 5px white solid;
+    text-align: center;
+}
+
+.blogPost {
+  background-color: #D5D3D2;
+}

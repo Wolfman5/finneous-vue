@@ -1,5 +1,10 @@
-  <div class="hello">
-    <h1>{{title}}</h1>
-    <h3> BlogId: {{blogId}}</h3>
-    <h4> Msg: {{msg}} </h4>
+  <div class="blogPost">
+    <div class="blogPostTitleImage" v-bind:style="{background: 'url(' + imgUrl +') center / cover'}">
+    </div>
+    <div class="blogTitle">
+      <h3>{{title}}</h3>
+    </div>
+    <div class="blogText">
+      {{msg}}
+    </div>
   </div>
