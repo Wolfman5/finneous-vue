@@ -11,6 +11,7 @@ export default {
       msg: '',
       title: '',
       imgUrl: '',
+      date: '',
       blogId: this.$route.query.blogId
     }
   },
@@ -21,6 +22,7 @@ export default {
           this.$data.title = response.data.title
           this.$data.msg = response.data.text
           this.$data.imgUrl = response.data.imgUrl
+          this.$data.date = response.data.date
         })
     }
   }
